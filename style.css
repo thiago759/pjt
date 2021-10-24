@@ -1,0 +1,471 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Megrim&display=swap');/* ''megrim', cursive*/
+@import url('https://fonts.googleapis.com/css2?family=Croissant+One&display=swap');/* 'Croissant One', cursive;*/
+@import url('https://fonts.googleapis.com/css2?family=Sarala&display=swap'); /*Sarala*/
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');/*'Benas Neue', cursive*/
+
+  
+
+body{
+    display: grid;
+    background: #FCFCFC;
+}
+
+nav {
+	background: #FFE4D5;
+	height: 80px;
+	width: 100%;
+	margin-top:-20px;
+}
+nav h1{
+	color: black;
+	font-size: 35px;
+	line-height: 80px;
+	letter-spacing: 0.5px;
+	padding: 5px ;
+	font-weight: bold;
+	font-family: 'Sarala';
+}
+nav ul {
+	float: right;
+	margin-right: 20px;
+	z-index: 1;
+}
+nav ul li {
+	display: inline-block;
+	line-height: 80px;
+	margin: 0 5px;
+}
+nav ul li a {
+	color: white;
+	font-size: 17px;
+	padding: 7px 13px;
+	border-radius: 3px;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+a.active, a:hover {
+	background: #1d075f;
+	transition: .5s;
+	text-decoration:none;
+}
+.checkbtn {
+	font-size: 30px;
+	color: black;
+	float: right;
+	line-height: 80px;
+	margin-right: 40px;
+	cursor: pointer;
+	display: none;
+	margin-top:25px;
+}
+#check {
+	display: none;
+}
+
+@media (max-width: 600px){
+ 
+	.checkbtn {
+		display: block;
+	}
+	label.logo{
+		font-size: 30px;
+		padding-left: 50px;
+	}
+	nav ul li a{
+		font-size: 16px;
+		margin-top: -100px;
+	}
+	nav ul{
+	  position: fixed;
+		width: 100%;
+		height: 100vh;
+		background: #1d075f;
+		top: 80px;
+		left: -100%;
+		text-align: center;
+		transition: all .5s;
+	}
+	nav ul li{
+		display: block;
+		margin: 50px;
+		line-height: 30px;
+	}
+	nav ul li a {
+		font-size: 20px;
+		margin-right: 80px;
+	}
+	a:hover, a.active {
+		background: none;
+		color: #5434af;
+	}
+	#check:checked ~ ul {
+		left: 0;
+	}
+}
+
+/*    começa    */
+.banner{
+  background: #FFE4D5;
+  position: relative;
+  width: 100%;
+  height:150px;
+  z-index: -2;
+}
+.banner img{
+  width:90%;
+  display: flex;
+  margin: auto;
+}
+#carouselExampleControls{
+  position: absolute;
+  width: 90%;
+  display: flex;
+  z-index:-2;
+  margin-left: 25px;
+}
+
+a i{
+  color: #FCFCFC;
+  font-size: 30px;
+  float: right;
+  margin-top: 13px;
+  margin-right: -380px;
+  text-decoration: none;
+}
+.control{
+  width:90%;
+  height:60px;
+  display: flex;
+  margin-left: 25px;
+  margin-top: -18px;
+  background: #000000;
+  border-radius: 0 0 20px 20px;
+}
+.icon{
+  display: flex;
+  margin-left: 50px;
+  margin-top: -45px;
+  font-size: 30px;
+  color: #eee;
+  float: left;
+}
+.icon_2:hover{
+  color: #ff0000;
+}
+.icon_2{
+  display: flex;
+  margin-left: 215px;
+  margin-top: -45px;
+  font-size: 30px;
+  color: #eee;
+  transition: all .4s;
+}
+
+.conteudo{
+  position: relative;
+  z-index: -3;
+  margin: 0 auto;
+  border-radius:20px;
+  width: 90%;
+  height:2350px;
+  background: #DDEEF2;
+}
+
+.conteudo .lixeiras img{
+  position: absolute;
+  z-index: -1;
+  display: flex;
+  width:350px;
+  margin-left: 170px;
+  float: right;
+  animation: pet 3s infinite ease; 
+  
+}
+@keyframes pet{
+  0%{
+    transform: rotate(0deg);
+    transform: translateY(0);
+  }
+  50%{
+    transform: rotate(5deg);
+    transform: translateY(-15px);
+  }
+  100%{
+    transform: rotate(-0deg);
+    transform: translateY(0px);
+  }
+}
+.conteudo p{
+  display: flex;
+  position: relative;
+  z-index: -2;
+  font-size: 18px;
+  width: 300px;
+  font-family: 'Ubuntu';
+  text-align: justify;
+}
+.conteudo a{
+  text-decoration: none;
+  font-size: 18px;
+  color: #5765FF;
+  font-weight: 700;
+}
+.conteudo #p-1{
+  font-size: 35px;
+  color: #FF4A4A;
+  transform: translateX(50%);
+}
+.conteudo #p-2{
+  font-size: 35px;
+  color: #002FFF;
+  transform: translateX(50%);
+}
+
+.conteudo .links{
+  display: flex;
+  float: right;
+  background: #000;
+  width: 200px;
+  height: 40px;
+  transform: rotate(90deg);
+  margin-top: -170px;
+  margin-right:-80px;
+  border-radius: 5px;
+}
+.conteudo .links a i{
+  margin: auto;
+  padding: 5px;
+}
+.conteudo .links #red{
+  color: red;
+}
+.conteudo .links #blue {
+  color: blue;
+}
+.conteudo .links #green {
+  color: green;
+}
+.conteudo .links #yellow {
+  color: yellow;
+}
+.conteudo #p-3{
+  font-size: 35px;
+  font-family: 'Ubuntu';
+  transform: translateX(50%);
+  color: green;
+}
+.conteudo #p_sec-3{
+  display: flex;
+  position: relative;
+  z-index: -2;
+  font-size: 18px;
+  width: 400px;
+  font-family: 'Ubuntu';
+  text-align: left;
+  margin:5px;
+}
+
+.conteudo #p-4{
+  font-size: 35px;
+  font-family: 'Ubuntu';
+  transform: translateX(50%);
+  color: yellow;
+}
+.conteudo #p_sec{
+  display: flex;
+  color: black;
+  font-family: 'Ubuntu';
+  font-size: 20px;
+  margin-left:80px;
+}
+::marker{
+  color:red;
+}
+.conteudo ul{
+  font-size: 20px;
+  font-family: 'Ubuntu';
+}
+
+.fab{
+  position: fixed;
+  bottom:10px;
+  right:100px;
+}
+
+.fab button{
+  cursor: pointer;
+  width: 48px;
+  height: 48px;
+  border-radius: 30px;
+  background-color: /*#cb60b3*/ #D8F4FF;
+  border: none;
+  box-shadow: 0 1px 5px rgba(0,0,0,.4);
+  font-size: 24px;
+  color: #110F48;
+    
+  -webkit-transition: .2s ease-out;
+  -moz-transition: .2s ease-out;
+  transition: .2s ease-out;
+}
+
+.fab button.main{
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  background-color: /*#5b19b7*/ #D8F4FF;
+  right: 0;
+  bottom: 0;
+  z-index: 20;
+}
+
+.fab button.main:before{
+  content: '⏚';
+}
+
+.fab ul{
+  position:absolute;
+  bottom: 0;
+  right: 0;
+  padding:0;
+  padding-right:5px;
+  margin:0;
+  list-style:none;
+  z-index:10;
+  
+  -webkit-transition: .2s ease-out;
+  -moz-transition: .2s ease-out;
+  transition: .2s ease-out;
+}
+.fab #op-1{
+  margin-right: 45px;
+}
+.fab #op-2{
+  margin-right: 38px;
+}
+.fab #op-3{
+  margin-right: 30px;
+}
+.fab ul li{
+  display: flex;
+  justify-content: flex-start;
+  position: relative;
+  margin-bottom: -10%;
+  opacity: 0;
+  
+  -webkit-transition: .3s ease-out;
+  -moz-transition: .3s ease-out;
+  transition: .3s ease-out;
+}
+
+.fab ul li label{
+  margin-right:10px;
+  white-space: nowrap;
+  display: block;
+  margin-top: 10px;
+  padding: 5px 8px;
+  background-color: white;
+  box-shadow: 0 1px 3px rgba(0,0,0,.2);
+  border-radius:3px;
+  height: 18px;
+  font-size: 16px;
+  pointer-events: none;
+  opacity:0;
+  
+  -webkit-transition: .2s ease-out;
+  -moz-transition: .2s ease-out;
+  transition: .2s ease-out;
+}
+
+.fab button.main:active,
+.fab button.main:focus{
+  outline: none;
+  background: #D8F4FF;
+  box-shadow: 0 5px 10px rgba(0,0,0,.5);
+ }
+ 
+.fab button.main:active:before,
+.fab button.main:focus:before{
+  content: '↑';
+}
+
+.fab button.main:active + ul,
+.fab button.main:focus + ul{
+  bottom: 70px;
+}
+
+.fab button.main:active + ul li,
+.fab button.main:focus + ul li{
+  margin-bottom: 10px;
+  opacity: 1;
+}
+
+.fab button.main:active + ul li:hover label,
+.fab button.main:focus + ul li:hover label{
+  opacity: 1;
+}
+
+#emoji_btn{
+  font-size: 5em;
+  filter: grayscale(1);
+  transition: .1s;
+  border:none;
+  cursor: pointer;
+  margin-left: 185px;
+}
+
+ #emoji_btn:hover{
+  transform: scale(1.23);
+  filter: grayscale(0);
+}
+
+footer{
+  background: #000;
+  width: 100%;
+  height: 500px;
+}
+.risco{
+  background: orangered;
+  height: 10px;
+  width: 100%;
+}
+footer h2{
+  display: flex;
+  color: white;
+  font-family: 'Poppins';
+  margin-left:140px;
+  font-weight: 800;
+}
+
+footer ul{
+  display: inline-block;
+}
+footer ul li{
+  text-align: center;
+  margin-left: 150px;
+  padding: 10px;
+  font-size: 20px;
+  list-style: none;
+  font-family: 'Sarala';
+  font-weight: bold;
+}
+footer ul #insta{
+  color: #BB006F;
+}
+footer ul #face{
+  color: #435FFF;
+}
+footer ul #twi{
+  color: #439DFF;
+}
+footer p{
+  color: white;
+  font-family: 'Exo 2';
+  font-size: 20px;
+  text-align: center;
+}
+
